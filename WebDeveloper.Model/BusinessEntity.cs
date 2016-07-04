@@ -5,8 +5,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebDeveloper.Model
 {
-    
-
     [Table("Person.BusinessEntity")]
     public partial class BusinessEntity
     {
@@ -22,12 +20,12 @@ namespace WebDeveloper.Model
         public Guid rowguid { get; set; }
 
         public DateTime ModifiedDate { get; set; }
-
         
         public virtual ICollection<BusinessEntityAddress> BusinessEntityAddress { get; set; }
-
-        
+       
         public virtual ICollection<BusinessEntityContact> BusinessEntityContact { get; set; }
+
+        public int PersonID { get; set; }
 
         public virtual Person Person { get; set; }
     }

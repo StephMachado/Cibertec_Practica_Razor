@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebDeveloper.Model
 {
-
     [Table("Person.BusinessEntityAddress")]
     public partial class BusinessEntityAddress
     {

@@ -20,8 +20,7 @@ namespace WebDeveloper.Model
         public string Name { get; set; }
 
         public DateTime ModifiedDate { get; set; }
-
-        
+       
         public virtual ICollection<PersonPhone> PersonPhone { get; set; }
     }
 }

@@ -4,9 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebDeveloper.Model
-{
-    
-
+{    
     [Table("Person.BusinessEntityContact")]
     public partial class BusinessEntityContact
     {

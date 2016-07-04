@@ -165,7 +165,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CountryRegionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StateProvinceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -219,6 +221,14 @@
     <Content Include="scss\styles.scss" />
     <Content Include="scss\base\_site.scss" />
     <Content Include="scss\helpers\_colors.scss" />
+    <Content Include="Views\CountryRegion\Index.cshtml" />
+    <Content Include="Views\CountryRegion\Create.cshtml" />
+    <Content Include="Views\CountryRegion\Edit.cshtml" />
+    <Content Include="Views\CountryRegion\Delete.cshtml" />
+    <Content Include="Views\StateProvince\Index.cshtml" />
+    <Content Include="Views\StateProvince\Create.cshtml" />
+    <Content Include="Views\StateProvince\Edit.cshtml" />
+    <Content Include="Views\StateProvince\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
