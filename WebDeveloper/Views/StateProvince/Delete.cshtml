@@ -10,6 +10,7 @@
 <div>
     <h4>StateProvince</h4>
     <hr />
+    @Html.HiddenFor(model => model.StateProvinceID)
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.CountryRegionCode)
@@ -36,7 +37,8 @@
         </dd>
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

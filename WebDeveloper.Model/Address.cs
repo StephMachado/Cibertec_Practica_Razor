@@ -13,28 +13,34 @@ namespace WebDeveloper.Model
             //BusinessEntityAddress = new HashSet<BusinessEntityAddress>();
         }
 
+        [Column(Order = 0)]
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "Address ID")]
         public int AddressID { get; set; }
 
+        [Column(Order = 1)]
         [Display(Name = "Address Line 1")]
         [Required(ErrorMessage = "The Address Line 1 is required")]
         [StringLength(60)]
         public string AddressLine1 { get; set; }
 
+        [Column(Order = 2)]
         [Display(Name = "Address Line 2")]
         [StringLength(60)]
         public string AddressLine2 { get; set; }
 
+        [Column(Order = 3)]
         [Display(Name = "City")]
         [Required(ErrorMessage = "The City is required")]
         [StringLength(30)]
         public string City { get; set; }
 
+        [Column(Order = 4)]
         [Display(Name = "State Province ID")]
         public int StateProvinceID { get; set; }
 
+        [Column(Order = 5)]
         [Display(Name = "Postal Code")]
         [Required(ErrorMessage = "The Postal Code is required")]
         [StringLength(15)]

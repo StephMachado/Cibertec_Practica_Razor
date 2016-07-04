@@ -84,12 +84,9 @@ namespace WebDeveloper.Controllers
         [HttpPost]
         public ActionResult Delete(StateProvince stateProvince)
         {
-            if (ModelState.IsValid)
-            {
-                _stateProvinceData.Delete(stateProvince);
-                return RedirectToAction("Index");
-            }
-            return View();
+            _stateProvinceData.Delete(stateProvince);
+            //return RedirectToAction("Index");
+            return View(_stateProvinceData.GetList());
         }
 
     }

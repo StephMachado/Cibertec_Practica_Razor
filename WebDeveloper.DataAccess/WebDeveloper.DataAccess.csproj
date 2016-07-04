@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressData.cs" />
     <Compile Include="AutomapperConfig.cs" />
     <Compile Include="BaseDataAccess.cs" />
     <Compile Include="ClassData\CountryRegionData.cs" />

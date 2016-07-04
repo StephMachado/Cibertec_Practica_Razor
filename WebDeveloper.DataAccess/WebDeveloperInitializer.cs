@@ -31,15 +31,6 @@ namespace WebDeveloper.DataAccess
                     };
             countryRegions.ForEach(c => context.CountryRegions.Add(c));
             context.SaveChanges();
-
-            ////StateProvince
-            //var stateProvinces = new List<StateProvince>
-            //{
-            //    new StateProvince {StateProvinceID=1,StateProvinceCode= "HH", CountryRegionCode="DE", Name = "Hamburg", ModifiedDate = System.DateTime.Now, IsOnlyStateProvinceFlag= true},
-            //    new StateProvince {StateProvinceID=1,StateProvinceCode= "IL", CountryRegionCode="US", Name = "Illinois", ModifiedDate = System.DateTime.Now, IsOnlyStateProvinceFlag= true}
-            //};
-            //stateProvinces.ForEach(c => context.StateProvinces.Add(c));
-            //context.SaveChanges();
         }
     }
 }
