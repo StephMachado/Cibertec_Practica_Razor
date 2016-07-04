@@ -15,5 +15,13 @@ namespace WebDeveloper.DataAccess
                 return dbContext.StateProvinces.FirstOrDefault(x => x.StateProvinceID == id);
             }
         }
+
+        public IEnumerable<CountryRegion> ListCountryRegions()
+        {
+            using (var dbContext = new WebContextDb())
+            {
+                return dbContext.CountryRegions.ToList();
+            }
+        }
     }
 }

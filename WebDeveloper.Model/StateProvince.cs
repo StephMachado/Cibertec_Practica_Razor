@@ -10,16 +10,18 @@ namespace WebDeveloper.Model
     {
         public StateProvince()
         {
-            Address = new HashSet<Address>();
+            //Address = new HashSet<Address>();
         }
+
+        public List<CountryRegion> ListCountryRegion;
 
         [Column(Order = 0)]
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "State Province ID")]
         public int StateProvinceID { get; set; }
 
-        [ForeignKey("CountryRegion")]
+        //[ForeignKey("CountryRegion")]
         [Column(Order = 1)]
         [Required(ErrorMessage = "The Country Region Code is required")]
         [StringLength(3)]
@@ -53,7 +55,7 @@ namespace WebDeveloper.Model
         [Display(Name = "Modified Date")]
         public DateTime ModifiedDate { get; set; }
 
-        [Display(Name = "Address")]
-        public virtual ICollection<Address> Address { get; set; }
+        //[Display(Name = "Address")]
+        //public virtual ICollection<Address> Address { get; set; }
     }
 }

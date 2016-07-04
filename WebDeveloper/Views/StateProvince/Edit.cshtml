@@ -20,8 +20,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CountryRegionCode, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CountryRegionCode, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CountryRegionCode, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => model.CountryRegionCode,
+                    new SelectList(ViewBag.CountryRegions, "CountryRegionCode", "Name", Model.CountryRegionCode),
+                    new { @class = "form-control" })
             </div>
         </div>
 

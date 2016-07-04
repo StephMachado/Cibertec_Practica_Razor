@@ -9,6 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -44,7 +45,7 @@
             @Html.DisplayFor(modelItem => item.IsOnlyStateProvinceFlag)
         </td>
         <th>
-            @Html.DisplayNameFor(model => model.ModifiedDate)
+            @Html.DisplayFor(modelItem => item.ModifiedDate)
         </th>
 
         <td>

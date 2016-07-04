@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebDeveloper.DataAccess;
+using WebDeveloper.DataAccess.ClassData;
 using WebDeveloper.Model;
 
 namespace WebDeveloper.Controllers
@@ -11,6 +12,7 @@ namespace WebDeveloper.Controllers
     public class StateProvinceController : Controller
     {
         private StateProvinceData _stateProvinceData = new StateProvinceData();
+        private CountryRegionData _countryRegionData = new CountryRegionData();
 
         //1° Listar StateProvince
         // GET: StateProvince
@@ -22,33 +24,27 @@ namespace WebDeveloper.Controllers
         //2° Crear StateProvince
         public ActionResult Create()
         {
+            ViewBag.CountryRegions = _countryRegionData.GetList();
             return View(new StateProvince());
         }
 
         [HttpPost]
-        public ActionResult Create(StateProvince stateProvince)
+        public ActionResult Create([Bind(Exclude = "StateProvinceID")] StateProvince stateProvince)
         {
             if (ModelState.IsValid)
             {
-                //try
-                //{
-                    var stateProvinceFind = _stateProvinceData.GetStateProvince(stateProvince.StateProvinceID);
-                    if (stateProvinceFind == null)
-                    {
-                        stateProvince.IsOnlyStateProvinceFlag = true;
-                        stateProvince.ModifiedDate = DateTime.Now;
-                        _stateProvinceData.Add(stateProvince);
-                        return RedirectToAction("Index");
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("CountryRegionCode", "Cannot insert duplicate key");
-                    }
-               //}
-               //catch(Exception ex)
-               //{
-                    //string mensaje = ex.Message;
-               //}
+                var stateProvinceFind = _stateProvinceData.GetStateProvince(stateProvince.StateProvinceID);
+                if (stateProvinceFind == null)
+                {
+                    stateProvince.IsOnlyStateProvinceFlag = true;
+                    stateProvince.ModifiedDate = DateTime.Now;
+                    _stateProvinceData.Add(stateProvince);
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ModelState.AddModelError("CountryRegionCode", "Cannot insert duplicate key");
+                }
             }
             return View();
         }
@@ -56,6 +52,7 @@ namespace WebDeveloper.Controllers
         //3° Modificar StateProvince
         public ActionResult Edit(int id)
         {
+            ViewBag.CountryRegions = _countryRegionData.GetList();
             var stateProvinceFind = _stateProvinceData.GetStateProvince(id);
             if (stateProvinceFind == null)
                 RedirectToAction("Index");
