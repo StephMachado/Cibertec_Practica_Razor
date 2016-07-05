@@ -85,8 +85,7 @@ namespace WebDeveloper.Controllers
         public ActionResult Delete(StateProvince stateProvince)
         {
             _stateProvinceData.Delete(stateProvince);
-            //return RedirectToAction("Index");
-            return View(_stateProvinceData.GetList());
+            return RedirectToAction("Index");
         }
 
     }

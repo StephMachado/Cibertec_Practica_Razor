@@ -10,7 +10,7 @@
 <div>
     <h4>StateProvince</h4>
     <hr />
-    @Html.HiddenFor(model => model.StateProvinceID)
+ 
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.CountryRegionCode)
@@ -40,6 +40,7 @@
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.StateProvinceID)
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |

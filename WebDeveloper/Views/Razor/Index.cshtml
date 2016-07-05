@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1" , maximun-scale="1" />
+    <title>Persons List</title>
+    <link href="~/Css/Site.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    @model IEnumerable<WebDeveloper.Model.DTO.PersonModelView>
+    @{
+        ViewBag.Title = "Persons List";
+    }
+
+    <h2>Index</h2>
+    <br />
+
+    <table>
+        <tr>
+            <td class="celda">Business Entity ID</td>
+            <td class="celda">First Name</td>
+            <td class="celda">Middle Name</td>
+            <td class="celda">Last Name</td>
+            <td class="celda">Foto</td>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="celda-contenido">@item.BusinessEntityID</td>
+                <td class="celda-contenido">@item.FirstName</td>
+                <td class="celda-contenido">@item.MiddleName</td>
+                <td class="celda-contenido">@item.LastName</td>
+                <td class="celda-contenido"></td>
+            </tr>
+        }
+    </table>
+
+   <br style="padding-bottom:10rem;"/>
+   <br style="padding-bottom:10rem;" />
+   <br style="padding-bottom:10rem;" />
+   <br style="padding-bottom:10rem;" />
+</body>
+</html>

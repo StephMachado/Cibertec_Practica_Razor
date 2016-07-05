@@ -21,3 +21,34 @@ section {
 .body-content {
   display: block; }
 
+.celda{
+    border-width: 0 0 1px;
+    padding-right: 1rem;
+    height: 1rem;
+    border-color: black;
+    text-align:center;
+    font-weight:bold;
+    color:black;
+    border-bottom-width: 1rem;
+    border-bottom-color:black;
+    border: solid black;
+    border-spacing: 3px;
+    padding-left:3rem;
+    padding-right:3rem;
+    background-color:#baa6a6;
+}
+
+.celda-contenido{
+    border-width: 0 0 1px;
+    padding-right: 1rem;
+    height: 1rem;
+    border-color: black;
+    text-align:center;
+    border-bottom-width: 1rem;
+    border-bottom-color:black;
+    border: solid black;
+    border-spacing:  3px;
+    padding-left:3rem;
+    padding-right:3rem;
+}
+
