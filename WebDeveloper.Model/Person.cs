@@ -20,7 +20,7 @@ namespace WebDeveloper.Model
         [Display(Name = "Business Entity ID")]
         public int BusinessEntityID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "The Person Type is required")]
         [StringLength(2)]
         [Display(Name = "Person Type")]
         public string PersonType { get; set; }
@@ -33,7 +33,7 @@ namespace WebDeveloper.Model
         public string Title { get; set; }
 
         [Display(Name = "FirstName")]
-        [Required]
+        [Required(ErrorMessage = "The Firs tName is required")]
         [StringLength(50)]
         public string FirstName { get; set; }
 
@@ -42,7 +42,7 @@ namespace WebDeveloper.Model
         public string MiddleName { get; set; }
 
         [Display(Name = "LastName")]
-        [Required]
+        [Required(ErrorMessage = "The Last Name is required")]
         [StringLength(50)]
         public string LastName { get; set; }
 

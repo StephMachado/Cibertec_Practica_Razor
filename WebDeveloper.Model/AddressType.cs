@@ -13,6 +13,8 @@ namespace WebDeveloper.Model
             BusinessEntityAddress = new HashSet<BusinessEntityAddress>();
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "Address Type ID")]
         public int AddressTypeID { get; set; }
 

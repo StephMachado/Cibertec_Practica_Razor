@@ -13,6 +13,8 @@ namespace WebDeveloper.Helpers
         public static IHtmlString Image(string src)
         {
             var builder = new TagBuilder("img");
+            if (String.IsNullOrEmpty(src))
+                src = "Images/FotoNoExiste.jpg";   
             builder.MergeAttribute("src", src);
             builder.MergeAttribute("height", "100");
             return MvcHtmlString.Create(builder.ToString(TagRenderMode.SelfClosing));

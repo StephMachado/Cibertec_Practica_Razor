@@ -167,6 +167,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AddressController.cs" />
+    <Compile Include="Controllers\ContactTypeController.cs" />
     <Compile Include="Controllers\CountryRegionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RazorController.cs" />
@@ -241,6 +242,10 @@
     <Content Include="Views\Address\Edit.cshtml" />
     <Content Include="Views\Address\Delete.cshtml" />
     <Content Include="Views\Razor\Index.cshtml" />
+    <Content Include="Views\ContactType\Index.cshtml" />
+    <Content Include="Views\ContactType\Create.cshtml" />
+    <Content Include="Views\ContactType\Edit.cshtml" />
+    <Content Include="Views\ContactType\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -10,7 +10,7 @@ namespace WebDeveloper.Model
     {
         public ContactType()
         {
-            BusinessEntityContact = new HashSet<BusinessEntityContact>();
+            //BusinessEntityContact = new HashSet<BusinessEntityContact>();
         }
 
         [Column(Order = 0)]
@@ -29,7 +29,7 @@ namespace WebDeveloper.Model
         [Display(Name = "Modified Date")]
         public DateTime ModifiedDate { get; set; }
 
-        [Display(Name = "Business Entity Contact")]
-        public virtual ICollection<BusinessEntityContact> BusinessEntityContact { get; set; }
+        //[Display(Name = "Business Entity Contact")]
+        //public virtual ICollection<BusinessEntityContact> BusinessEntityContact { get; set; }
     }
 }

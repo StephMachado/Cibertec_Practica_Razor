@@ -13,6 +13,8 @@ namespace WebDeveloper.Model
             PersonPhone = new HashSet<PersonPhone>();
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PhoneNumberTypeID { get; set; }
 
         [Required]
