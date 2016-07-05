@@ -25,7 +25,7 @@ namespace WebDeveloper.Model.DTO
         [Required]
         [StringLength(50)]
         public string LastName { get; set; }
-        public string IamgePath { get; set; }
+        public string ImagePath { get; set; }
 
         public DateTime ModifiedDate { get; set; }
 

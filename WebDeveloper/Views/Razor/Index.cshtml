@@ -9,6 +9,8 @@
 
 <body>
     @model IEnumerable<WebDeveloper.Model.DTO.PersonModelView>
+    @using WebDeveloper.Helpers
+
     @{
         ViewBag.Title = "Persons List";
     }
@@ -32,7 +34,7 @@
                 <td class="celda-contenido">@item.FirstName</td>
                 <td class="celda-contenido">@item.MiddleName</td>
                 <td class="celda-contenido">@item.LastName</td>
-                <td class="celda-contenido"></td>
+                <td class="celda-contenido">@ImageHelper.Image(item.ImagePath)</td>
             </tr>
         }
     </table>

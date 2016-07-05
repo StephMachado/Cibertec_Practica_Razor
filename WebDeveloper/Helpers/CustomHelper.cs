@@ -10,9 +10,6 @@ namespace WebDeveloper.Helpers
 {
     public static class CustomHelper
     {
-        //Generados por Stephany Machado
-
-       //Generado por Profesor
         public static IHtmlString DisplayPriceStatic(double price)
         {
             return new HtmlString(GetHtmlForPrice(price));
