@@ -15,6 +15,7 @@ namespace WebDeveloper.Controllers
     public class RazorController : Controller
     {
         // GET: Razor
+        [Route]
         public ActionResult Index()
         {
             var persons = new List<PersonModelView>
